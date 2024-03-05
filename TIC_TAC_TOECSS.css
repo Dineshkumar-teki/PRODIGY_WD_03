@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --orange:rgb(255, 166, 0);
+    --black:rgb(184, 184, 238);
+    --red:rgb(235, 80, 80);
+}
+body{
+    font-family: 'finger paint',cursive;
+    color: var(--orange);
+
+}
+h1{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(201, 230, 225);
+    padding: 30px;
+    
+}
+
+#gameboard{
+    width: 450px;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    color: var(--orange);
+    font-size: 5rem;
+    border-right:2px solid;
+    border-bottom: 2px solid;
+}
+.box:nth-child(3n){
+    border-right: none;
+}
+.box:nth-child(6)~.box{
+    border-bottom: none;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: var(--orange);
+    border-radius: 10px;
+    border-color: rgba(255, 68, 0, 0.904);
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 200ms transform;
+    margin-top: 10px;
+}
+button:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+}
